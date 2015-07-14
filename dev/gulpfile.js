@@ -46,6 +46,19 @@ gulp.task('scripts', function() {
 
 });
 
+
+gulp.task('css', function () {
+gulp.src('www/lib/**/*.css')
+    .pipe(minifyCss())
+    .pipe(concat('all.css'))
+    .pipe(gulp.dest('../mobile/lib/css'))
+    .pipe(livereload());
+
+});
+
+
+
+
 //librerias de web 
 gulp.task('js', function() {
   gulp.src('www/js/**/*.js')
@@ -74,7 +87,7 @@ gulp.task('minify-css', function() {
 
 
 
-gulp.task('default', ['minify-html', 'js', 'scripts', 'minify-css', 'images', 'watch']);
+gulp.task('default', ['minify-html', 'js', 'scripts', 'minify-css', 'images', 'css', 'watch']);
 
 gulp.task('watch', function() {
     gulp.watch('www/*.html', ['minify-html']);
@@ -82,5 +95,6 @@ gulp.task('watch', function() {
     gulp.watch('www/css/**/*.css', ['minify-css']);
     gulp.watch('www/img/**/*.{png,jpg,jpeg,gif,svg}', ['images']);
     gulp.watch('www/lib/**/*.js', ['scripts']);
+    gulp.watch('www/lib/**/*.css', ['css']);
 
 });
