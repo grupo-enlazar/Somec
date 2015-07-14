@@ -48,33 +48,27 @@
                 <body>
 
 <div class="item item-body">
-    <img src="img/IMAGE_banner-contacto_46.jpg" alt="">
-   
-<div class="encadezados">
-<a clas="subtitulos">Contacto</a>
+    <img src="img/IMAGE_banner-contacto_46.jpg" alt=""> 
 
-
-<p></p>
-</div>
-
- <div class="list">
-    <label class="item item-input">
-        <input type="text" placeholder="Name:">
-    </label>
-
-<label class="item item-input">
-        <input type="text" placeholder="Email:">
-    </label>
-    <label class="item item-input">
-        <input type="text" placeholder="Subject:">
-    </label>
-
-    <label class="item item-input">
-        <textarea placeholder="Message:"></textarea>
-    </label>
-</div>
-
-<div><button class="enviar">Enviar</button></div>
+ <div class="contact" id="contact">
+            <div class="container">
+                
+                  <div class="contact-form">
+                    <form  method="POST" action="envio.php">
+                    <p class="comment-form-author"><label for="author"> Name</label>
+                      <input type="text" name="nombre" class="textbox" value="Enter name ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ingrese su nombre...';}">
+                  </p>
+                    <p class="comment-form-author"><label for="Email">Email</label>
+                     <input type="text" name="email" class="textbox" value="Enter email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ingrese su  email...';}">
+                    </p>
+                    <p class="comment-form-author"><label for="Mensaje">Message</label>
+                    <textarea name="mensaje" value="Ingrese su mensaje..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Enter your message ...</textarea>
+                    </p>
+                    <input type="submit" id="envio" value="send">
+                  </form>
+                  </div>
+            </div>
+          </div>
 
 
         <div>
