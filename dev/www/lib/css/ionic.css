@@ -2532,7 +2532,7 @@ a.subdued {
 	white-space: nowrap;
 	font-size: 11px;
 	line-height: 44px;
-	padding: 4px;
+	padding: 2px;
 	margin-top: 0;
 	margin-right: 10px;
 	margin-bottom: 0;
@@ -3658,16 +3658,13 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
 }
 
 
-
 .item-body {
 	overflow: auto;
-	padding: 15px;
+	padding: 12px;
 	text-overflow: inherit;
 	white-space: normal;
-  margin-top: 8px;
+  margin-top: 3px;
 }
-
-
 
   .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
     margin-top: 15px;
