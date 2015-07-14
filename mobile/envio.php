@@ -11,12 +11,12 @@ $mensaje = 'estos son los datos enviados desde el formulario:
 Nombre: '.$nombre.'
 Email: '.$email.'
 Mensaje: '.$mensaje;
-$para = "jonathan@enlazar.net";
+$para = "comercialymercadeo@somecoop.com";
 $asunto = "contacto de ". $nombre;
 
 $validar = filter_var($email, FILTER_VALIDATE_EMAIL);
 if ($validar) {
     mail($para,$asunto,utf8_decode($mensaje),$header);
 }
-echo "informacion enviada correctamente";
+header('Location: envio.html');
 ?>
